@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1>Counter</h1>
+    <p>Counter:{{session.count}}</p>
+    <p>Visits:{{session.visits}}</p>
+    <a href="/double_count"><button >Increment 2!</button></a>
+    <form action="/increment_by" method="post">
+        <label for="increment">
+            Increment by:
+            <input type="number" name="increment">
+        </label>
+        <input type="submit" name="increment" value="Increase!">
+    </form>
+    <a href="/destroy_session"><button >Reset</button></a>
+</body>
+</html>
