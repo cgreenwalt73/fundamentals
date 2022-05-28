@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-left: 500px;
+    padding-top: 10px;
+}
+h1{
+    font-size: 40px;
+    width: 300px;
+    text-align: center;
+    border: 2px black solid;
+    margin-left: 250px;
+}
+.board{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 800px;
+}
+.box1, .box2{
+    margin: 0;
+    height: 100px;
+    width: 100px;
+}

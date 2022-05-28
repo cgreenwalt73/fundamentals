@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 style="color: {{color2}}; background-color: {{color1}}">Checkerboard</h1>
+    <div class="board">
+    {% for col in range(columns): %}                {# Iterating to create the proper number of columns #}
+        <div class="column{{col}}">
+        {% if col%2==0 %}                       {# Alternating the pattern every other row #}
+            {% for row in range(rows): %}            {# Creating the colored boxes in each row #}
+                {% if row%2==0: %}
+                    <div class="box1" style="background-color: {{ color1 }} "></div>
+                {% else: %}
+                    <div class="box2" style="background-color: {{ color2 }} "></div>
+                {% endif %}
+            {% endfor %}
+        {% else: %}
+            {% for row in range(rows): %}
+                {% if row%2==0: %}
+                    <div class="box2" style="background-color: {{ color2 }} "></div>
+                {% else: %}
+                    <div class="box1" style="background-color: {{ color1 }} "></div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
