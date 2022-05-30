@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <title>Dojo Survey</title>
+</head>
+<body style="margin: 20px; background-color: black; color: gray;">
+    <form action="/process" method="post" style="display:inline-block">
+        <label for="name" class="form-label">Your name:
+            <input type="text" name="name" class="form-control">
+        </label>
+        <div class="form-check">
+            <label for="location" class="form-check-label">Dojo Location:</label>
+                <div class="form-check">
+                    <label for="sanjose" class="form-check-label">San Jose</label>
+                    <input type="radio" id="sanjose" class="form-check-input" name="location" value="San Jose">
+                </div>
+                <div class="form-check">
+                    <label for="seattle" class="form-check-label">Seattle</label>
+                    <input type="radio" id="seattle" class="form-check-input" name="location" value="Seattle">
+                </div>
+                <div class="form-check">
+                    <label for="losangeles" class="form-check-label">Los Angeles</label>
+                    <input type="radio" id="losangeles" class="form-check-input" name="location" value="Los Angeles">
+                </div>
+                <div class="form-check">
+                    <label for="chicago" class="form-check-label">Chicago</label>
+                    <input type="radio" id="chicago" class="form-check-input" name="location" value="Chicago">
+                </div>
+                <div class="form-check">
+                    <label for="online" class="form-check-label">Online</label>
+                    <input type="radio" id="online" class="form-check-input" name="location" value="Online">
+                </div>
+        </div>
+        <label for="language" class="form-check">Favorite Language:</label>
+            <div class="form-check">
+                <input type="checkbox" id="python" class="form-check-input" name="language" value="Python">
+                <label for="python" class="form-check-label">Python</option>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="html" class="form-check-input" name="language" value="HTML">
+                <label for="html" class="form-check-label">HTML</option>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="c#" class="form-check-input" name="language" value="C#">
+                <label for="c#" class="form-check-label">C#</option>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="js" class="form-check-input" name="language" value="Javascript">
+                <label for="js" class="form-check-label">Javascript</option>
+            </div>
+        <label for="comment" class="form-label">
+            Comment (optional):
+            <textarea name="comment" cols="50" rows="5"></textarea>
+        </label>
+        <input type="submit" name='submit' value="Submit">
+    </form>
+</body>
+</html>
